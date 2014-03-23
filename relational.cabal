@@ -1,0 +1,35 @@
+name:                relational
+version:             0.1.0.0
+synopsis:            A Relational Model embedding (with extensions)
+description:         
+  Based on the book /Temporal Data & the Relational Model/ by
+  Date, Darwen, and Lorentzos this package first implements a
+  relational algebraic embedded language using Haskell types (the
+  style heavily influenced by Jonathan Sterling's @Vinyl@
+  package). Secondly it implements a number of types and
+  extensions to that base model introduced in the reference book
+  such as interval arithmetic.
+license:             AllRightsReserved
+license-file:        LICENSE
+author:              Joseph Abrahamson
+maintainer:          me@jspha.com
+copyright:           2013 (c) Joseph Abrahamson
+category:            Database
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     
+    Rel
+    Rel.Internal.Elem
+    Rel.Internal.Implicit
+    Rel.Internal.Project
+    Rel.Internal.Rel
+    Rel.Internal.Tup
+    Rel.Internal.Types
+  build-depends:       base >=4.6 && <4.7
+                     , containers
+                     , ghc-prim
+                     , lens
+  hs-source-dirs:      src
+  default-language:    Haskell2010
